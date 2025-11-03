@@ -48,12 +48,12 @@ public class Main {
             }
 
             try {
-                List<String> actualCommandTest = new ArrayList<>();
-                actualCommandTest.add("cmd.exe");
-                actualCommandTest.add("/c");
-                actualCommandTest.addAll(commandList); 
-                // actualCommandTest.add(filePath);
-                for (int innie = 1; innie< tokens.length; innie++){
+                List<String> actualCommandTest = new ArrayList<>();         //I will admit this section I asked ai to help me since I only know Windows commands i asked an ai to config it for me within this project
+                actualCommandTest.add("cmd.exe");                       //I will mention this later in the project in a comment but I dont know much about Terminal Commands but I do know three so those are the three here
+                actualCommandTest.add("/c");                           // dir, type, and cd. cd is the only one I use lots more than the others but cd allows for the user to move around the project cd main to cd main/folder1
+                actualCommandTest.addAll(commandList);                  // dir will show all the stuff in the project that is reach able, so lets say that you have a folder and dont wanna open it you can just type dir and it shows you it (I dont use it unless the project is tiny)
+                // actualCommandTest.add(filePath);                    // type will write whatever is inside of the file so lets say you "type test.txt" it'll write whats in it.
+                for (int innie = 1; innie< tokens.length; innie++){                         
                     String blah = tokens[innie].replace("/", File.separator);
                     actualCommandTest.add(blah);
                 }
